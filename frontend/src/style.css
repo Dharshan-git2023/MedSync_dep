@@ -1,0 +1,150 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer base {
+  /* Updated typography to match design specs: Poppins for headings, Inter for body */
+  body {
+    @apply bg-gradient-to-br from-white to-blue-50 text-gray-800 font-sans;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading font-bold text-gray-900;
+  }
+
+  h1 {
+    @apply text-4xl;
+  }
+
+  h2 {
+    @apply text-3xl;
+  }
+
+  h3 {
+    @apply text-2xl;
+  }
+}
+
+@layer components {
+  /* Updated button styles with exact colors from design specs */
+  .btn-primary {
+    @apply px-6 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-200 font-medium shadow-sm hover:shadow-md;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-2.5 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-all duration-200 font-medium shadow-sm hover:shadow-md;
+  }
+
+  .btn-success {
+    @apply px-6 py-2.5 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-all duration-200 font-medium shadow-sm hover:shadow-md;
+  }
+
+  .btn-danger {
+    @apply px-6 py-2.5 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-all duration-200 font-medium shadow-sm hover:shadow-md;
+  }
+
+  .btn-warning {
+    @apply px-6 py-2.5 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-all duration-200 font-medium shadow-sm hover:shadow-md;
+  }
+
+  .btn-outline {
+    @apply px-6 py-2.5 border-2 border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-all duration-200 font-medium;
+  }
+
+  /* Updated card styling with proper shadows and rounded corners per design */
+  .card {
+    @apply bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 p-6 border border-gray-100;
+  }
+
+  .card-lg {
+    @apply bg-white rounded-xl shadow-md p-8 border border-gray-100;
+  }
+
+  /* Updated input field styling */
+  .input-field {
+    @apply w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 bg-white;
+  }
+
+  /* Added badge styles for status indicators */
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+  }
+
+  .badge-success {
+    @apply bg-green-100 text-green-800;
+  }
+
+  .badge-warning {
+    @apply bg-orange-100 text-orange-800;
+  }
+
+  .badge-danger {
+    @apply bg-red-100 text-red-800;
+  }
+
+  .badge-info {
+    @apply bg-blue-100 text-blue-800;
+  }
+
+  /* Added glass-morphism effect for premium look */
+  .glass {
+    @apply bg-white/80 backdrop-blur-md border border-white/20;
+  }
+
+  /* Added stat card styling */
+  .stat-card {
+    @apply bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-200;
+  }
+
+  /* Added timeline styling */
+  .timeline {
+    @apply relative;
+  }
+
+  .timeline-item {
+    @apply flex gap-4 pb-8 relative;
+  }
+
+  .timeline-item:not(:last-child)::after {
+    content: "";
+    @apply absolute left-6 top-12 w-0.5 h-12 bg-gradient-to-b from-blue-400 to-transparent;
+  }
+
+  .timeline-dot {
+    @apply w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center text-white flex-shrink-0 shadow-md;
+  }
+}
+
+/* Added utility classes for common patterns */
+.text-balance {
+  text-wrap: balance;
+}
+
+.smooth-transition {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.gradient-blue-cyan {
+  @apply bg-gradient-to-r from-blue-400 to-cyan-400;
+}
+
+.gradient-blue-teal {
+  @apply bg-gradient-to-r from-blue-600 to-teal-600;
+}
+
+.gradient-green-emerald {
+  @apply bg-gradient-to-r from-green-500 to-emerald-500;
+}
+
+.gradient-orange-red {
+  @apply bg-gradient-to-r from-orange-500 to-red-500;
+}
+
+.gradient-purple-pink {
+  @apply bg-gradient-to-r from-purple-500 to-pink-500;
+}
