@@ -14,8 +14,14 @@ export default defineConfig(async ({ command, mode }) => {
     // plugin not installed — that's fine for CI / production builds
   }
 
+  // Allow overriding the base at build time using VITE_BASE environment variable.
+  // Default to a relative path './' so the built `dist/index.html` works when opened
+  // directly or served from the repository root. For GitHub Pages set VITE_BASE to
+  // '/Medsync/' in the CI environment or secrets.
+  const basePath = process.env.VITE_BASE || './'
+
   return {
-    base: "/Medsync/",
+    base: basePath,
     plugins: [vue(), ...(vueDevToolsPlugin ? [vueDevToolsPlugin()] : [])],
     resolve: {
       alias: {
