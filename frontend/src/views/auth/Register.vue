@@ -52,7 +52,6 @@
               <option value="patient">Patient</option>
               <option value="doctor">Doctor</option>
               <option value="pharmacy">Pharmacy</option>
-              <option value="admin">Admin</option>
             </select>
           </div>
 
@@ -133,13 +132,21 @@ const agreeTerms = ref(false)
 const loading = ref(false)
 const error = ref('')
 
-role.value = route.query.role || ''
+// Only these roles are allowed to self-register from the frontend.
+const allowedRoles = ['patient', 'doctor', 'pharmacy']
+const initialRole = Array.isArray(route.query.role) ? route.query.role[0] : route.query.role
+role.value = allowedRoles.includes(String(initialRole)) ? String(initialRole) : ''
 
 const handleRegister = async () => {
   loading.value = true
   error.value = ''
   
   try {
+    // Validate role on the client to prevent self-registration as 'admin'.
+    if (!allowedRoles.includes(role.value)) {
+      throw new Error('Please select a valid role to register (Patient, Doctor, or Pharmacy).')
+    }
+
     await authStore.register(email.value, password.value, fullName.value, phoneNumber.value, role.value)
     router.push(`/${role.value}/dashboard`)
   } catch (err) {

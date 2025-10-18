@@ -1,13 +1,13 @@
 <template>
   <div class="flex h-screen bg-background">
     <!-- Sidebar -->
-    <aside class="w-60 bg-gradient-to-b from-green-600 to-green-700 text-white shadow-lg">
+    <aside class="w-60 bg-gradient-to-b from-green-600 to-green-700 text-white shadow-lg flex flex-col">
       <div class="p-6 border-b border-green-500">
         <h1 class="text-2xl font-bold">MedSync</h1>
         <p class="text-sm text-green-100">Patient Portal</p>
       </div>
       
-      <nav class="mt-6">
+      <nav class="mt-6 flex-1 overflow-auto">
         <router-link
           v-for="item in navItems"
           :key="item.path"
@@ -20,7 +20,7 @@
         </router-link>
       </nav>
 
-      <div class="absolute bottom-6 left-6 right-6">
+      <div class="p-6">
         <button @click="logout" class="w-full btn-outline text-white border-white hover:bg-green-600">
           Logout
         </button>

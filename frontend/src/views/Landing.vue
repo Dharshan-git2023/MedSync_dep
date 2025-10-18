@@ -184,28 +184,64 @@
     </section>
 
     <!-- Statistics Section -->
-    <section class="bg-gradient-to-r from-primary to-secondary py-16 md:py-20">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid md:grid-cols-4 gap-8 text-white text-center">
-          <div>
-            <p class="text-4xl md:text-5xl font-bold mb-2">50+</p>
-            <p class="text-blue-100">Hospitals Connected</p>
-          </div>
-          <div>
-            <p class="text-4xl md:text-5xl font-bold mb-2">10K+</p>
-            <p class="text-blue-100">Active Patients</p>
-          </div>
-          <div>
-            <p class="text-4xl md:text-5xl font-bold mb-2">200+</p>
-            <p class="text-blue-100">Pharmacies</p>
-          </div>
-          <div>
-            <p class="text-4xl md:text-5xl font-bold mb-2">99.9%</p>
-            <p class="text-blue-100">Uptime</p>
-          </div>
+    <!-- Statistics Section -->
+<section class="relative bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-700 py-20 md:py-28 overflow-hidden">
+  <div class="absolute inset-0 bg-white/10 backdrop-blur-sm"></div>
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl md:text-4xl font-extrabold text-white text-center mb-14 tracking-wide">
+      Our Impact in Numbers
+    </h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 text-center">
+
+      <!-- Card 1 -->
+      <div class="bg-white/90 text-gray-900 rounded-2xl p-8 shadow-xl hover:scale-105 transform transition duration-300 border border-white/30">
+        <div class="flex justify-center mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16h6m2 4H7a2 2 0 01-2-2V6a2 2 0 012-2h3.586a1 1 0 01.707.293l1.414 1.414A1 1 0 0013.414 6H17a2 2 0 012 2v10a2 2 0 01-2 2z" />
+          </svg>
         </div>
+        <p class="text-5xl font-extrabold mb-2 text-gray-900">50+</p>
+        <p class="font-semibold text-gray-700">Hospitals Connected</p>
       </div>
-    </section>
+
+      <!-- Card 2 -->
+      <div class="bg-white/90 text-gray-900 rounded-2xl p-8 shadow-xl hover:scale-105 transform transition duration-300 border border-white/30">
+        <div class="flex justify-center mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5V4H2v16h5m10 0a3 3 0 11-6 0m6 0H9" />
+          </svg>
+        </div>
+        <p class="text-5xl font-extrabold mb-2 text-gray-900">10K+</p>
+        <p class="font-semibold text-gray-700">Active Patients</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white/90 text-gray-900 rounded-2xl p-8 shadow-xl hover:scale-105 transform transition duration-300 border border-white/30">
+        <div class="flex justify-center mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h18v18H3V3zm3 3v12m12-6H6" />
+          </svg>
+        </div>
+        <p class="text-5xl font-extrabold mb-2 text-gray-900">200+</p>
+        <p class="font-semibold text-gray-700">Pharmacies</p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="bg-white/90 text-gray-900 rounded-2xl p-8 shadow-xl hover:scale-105 transform transition duration-300 border border-white/30">
+        <div class="flex justify-center mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M12 20h9" />
+          </svg>
+        </div>
+        <p class="text-5xl font-extrabold mb-2 text-gray-900">99.9%</p>
+        <p class="font-semibold text-gray-700">Uptime</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
     <!-- Footer -->
     <footer class="bg-foreground text-white py-12">
