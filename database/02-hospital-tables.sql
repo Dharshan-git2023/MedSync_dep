@@ -1,15 +1,5 @@
--- Hospital Management Tables
+-- DEPRECATED: This file was consolidated into `all_tables_with_sample_data.sql`.
+-- Please use `database/all_tables_with_sample_data.sql` which contains the full
+-- schema and sample data (two sample rows per table).
 
-CREATE TABLE hospitals (
-  hospital_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  hospital_name VARCHAR(255) NOT NULL,
-  address TEXT NOT NULL,
-  contact_number VARCHAR(20),
-  license_number VARCHAR(100) UNIQUE NOT NULL,
-  admin_user_id UUID REFERENCES users(user_id) ON DELETE SET NULL,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-
-CREATE INDEX idx_hospitals_admin_user_id ON hospitals(admin_user_id);
-CREATE INDEX idx_hospitals_license_number ON hospitals(license_number);
+/* Original content removed to avoid duplicate schemas. */

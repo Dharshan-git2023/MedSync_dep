@@ -16,7 +16,7 @@ const authStore = defineStore("auth", () => {
   const login = async (email, password) => {
     try {
       const { default: api } = await import("@/api/client")
-      const response = await api.post("/auth/login", { email, password })
+  const response = await api.post("/api/auth/login", { email, password })
       accessToken.value = response.data.access_token
       refreshToken.value = response.data.refresh_token
       user.value = { user_id: response.data.user_id, role: response.data.role }
@@ -33,7 +33,7 @@ const authStore = defineStore("auth", () => {
   const register = async (email, password, fullName, phoneNumber, role) => {
     try {
       const { default: api } = await import("@/api/client")
-      const response = await api.post("/auth/register", {
+  const response = await api.post("/api/auth/register", {
         email,
         password,
         full_name: fullName,
